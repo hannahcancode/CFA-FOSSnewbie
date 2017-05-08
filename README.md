@@ -2,14 +2,16 @@
 
 ## About
 
-I wanted to search FOSS projects on GitHub to find issues that are labelled as suitable for first time contributors, and by language.
+I wanted to search projects on GitHub by language to find issues that are labelled as suitable for first time contributors to Free and Open Source (FOSS).
 
 FOSSnewbie is a node terminal app that takes user input for issue tag and language, and then uses the GitHub API to search issues that match.
+
+This is my first node project!
 
 ## Installation
 
 - Clone this repository
-- run `$ npm install` to install the packages from the package.json
+- run `$ npm install` to install the modules from the package.json
 - run `$ node index.js` and follow the prompts
 
 ## To do
