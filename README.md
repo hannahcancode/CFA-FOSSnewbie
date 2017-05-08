@@ -18,3 +18,4 @@ This is my first node project!
 - Check user input is a valid number
 - Allow user to input other query terms
 - Add defaults (e.g. 'first-timers-only')
+- Add tests
