@@ -1,0 +1,16 @@
+{
+  "name": "FOSSnewbie",
+  "version": "1.0.0",
+  "description": "A node terminal app for searching GitHub respository issues by label and language",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Hannah Thompson",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.16.1",
+    "chalk": "^1.1.3",
+    "prompt": "^1.0.0"
+  }
+}
