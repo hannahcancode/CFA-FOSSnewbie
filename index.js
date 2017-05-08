@@ -12,13 +12,12 @@ function getGithub(label, language) {
       response["data"]["items"].forEach(function(item, index) {
         if (index < 40) {
           console.log(chalk.cyan.bold(`Item ${index + 1}`));
-          console.log(chalk.cyan.bold('Repository url:'), chalk.grey(item["repository_url"]));        // can also do response.data.name
+          console.log(chalk.cyan.bold('Repository url:'), chalk.grey(item["repository_url"]));
           console.log(chalk.cyan.bold('Issue title:'), chalk.grey(item["title"]), "\n");
         }
       });
       getFurther(response);
     })
-
     .catch(function (error) {
       console.log(error);
     });
