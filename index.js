@@ -27,9 +27,14 @@ function getFurther(response) {
   console.log("Enter a number to get more information, or enter 'quit' to finish");
   prompt.get(['number'], function (err, result) {
     if (result.number === 'quit') { return };
-    console.log(chalk.cyan.bold(`Issue ${result.number}:`), chalk.grey(response["data"]["items"][result.number - 1]["title"]), "\n");
-    console.log(chalk.cyan.bold('Issue body:'), chalk.grey(response["data"]["items"][result.number - 1]["body"]), "\n");
-    console.log(chalk.cyan.bold('Repository url:'), chalk.grey(response["data"]["items"][result.number - 1]["repository_url"], "\n"));
+    if (isNaN(parseInt(result.number)) || result.number > 30 || result.number < 0) {
+      console.log(chalk.red.bold('That is not a valid number, please try again'));
+    }
+    else {
+      console.log(chalk.cyan.bold(`Issue ${result.number}:`), chalk.grey(response["data"]["items"][result.number - 1]["title"]), "\n");
+      console.log(chalk.cyan.bold('Issue body:'), chalk.grey(response["data"]["items"][result.number - 1]["body"]), "\n");
+      console.log(chalk.cyan.bold('Repository url:'), chalk.grey(response["data"]["items"][result.number - 1]["repository_url"], "\n"));
+    }
     getFurther(response);
   });
 }
